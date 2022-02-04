@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kivétel eldobása</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="resources/training360.css" rel="stylesheet">
+  </head>
+  <body>
+    <textarea id="source">
+class: inverse, center, middle
+
+# Kivétel eldobása
+
+---
+
+# Kivétel eldobása
+
+```java
+public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int number = Integer.parseInt(scanner.nextLine());
+    if (number < 0) {
+        throw new IllegalArgumentException("Not positive!");
+    }
+    System.out.println(number);
+}
+```
+
+* Ugyanúgy példányosítással létrehozunk egy új példányt
+* A `throw` kulcsszóval dobható el, váltható ki a kivétel
+
+---
+
+# Hibaüzenet
+
+* Mindenképpen informatív üzenetet adjunk meg
+
+```java
+throw new IllegalArgumentException("Not positive: " + number);
+```
+
+---
+
+# Kivétel mélyebb szinten
+
+```java
+public static void main(String[] args) {
+    int number = new InputNumberMain().inputNumber();
+    System.out.println(number);
+}
+
+public int inputNumber() {
+    Scanner scanner = new Scanner(System.in);
+    int number = Integer.parseInt(scanner.nextLine());
+    if (number < 0) {
+        throw new IllegalArgumentException("Not positive!");
+    }
+    return number;
+}
+```
+
+---
+
+# Kivétel kezelése
+
+```java
+public static void main(String[] args) {
+    try {
+        int number = new InputNumberMain().inputNumber();
+        System.out.println(number);
+    }
+    catch (IllegalArgumentException iae) {
+        System.out.println(iae.getMessage());
+    }
+}
+```
+    </textarea>
+    <script src="resources/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+		ratio: '16:9',
+		});
+    </script>
+  </body>
+</html>

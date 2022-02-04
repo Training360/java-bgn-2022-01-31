@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vezérlési szerkezetek és az elágazás</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="resources/training360.css" rel="stylesheet">
+  </head>
+  <body>
+    <textarea id="source">
+class: inverse, center, middle
+
+
+
+# Vezérlési szerkezetek és az elágazás
+
+---
+
+# Vezérlési szerkezetek
+
+* Minden algoritmus felépíthető három vezérlési szerkezet használatával:
+  * Szekvencia
+  * Szelekció
+  * Iteráció
+* Nincs szükség ugrásra
+
+---
+
+# Feltételes elágazás
+
+* Az `if` kulcsszó használatával, `boolean` kifejezéssel
+* Érdemes mindig blokkot használni a törzsnél
+* `else` használata
+* `else` összefűzhető további `if` kifejezéssel
+
+---
+
+# Feltételes elágazás példa
+
+```java
+if ((x % 2) == 0) {
+    System.out.println("Even");
+} else {
+    System.out.println("Odd");
+}
+```
+---
+
+# `switch` utasítás
+
+* Feltételben
+ * Bármi, ami `int` típussá automatikusan konvertálható
+ * enum
+ * `String`
+* `case` ágban fordítási időben ismert, konstans értékek
+* Szemantika: egyenlőség esetén belép, <br /> és `case` ágaktól függetlenül folytatja a <br /> végrehajtást
+
+---
+
+# `switch` példa
+
+```java
+public String getTypeOfDayWithSwitchStatement(String dayOfWeekArg) {
+     String typeOfDay;
+     switch (dayOfWeekArg) {
+         case "Monday":
+             typeOfDay = "Start of work week";
+             break;
+         case "Tuesday":
+         case "Wednesday":
+         case "Thursday":
+             typeOfDay = "Midweek";
+             break;
+         case "Friday":
+             typeOfDay = "End of work week";
+             break;
+         case "Saturday":
+         case "Sunday":
+             typeOfDay = "Weekend";
+             break;
+         default:
+             throw new IllegalArgumentException("Unknown day");
+     }
+     return typeOfDay;
+}
+```
+    </textarea>
+    <script src="resources/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+		ratio: '16:9',
+		});
+    </script>
+  </body>
+</html>

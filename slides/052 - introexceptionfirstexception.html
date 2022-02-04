@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Első kivétel</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="resources/training360.css" rel="stylesheet">
+  </head>
+  <body>
+    <textarea id="source">
+class: inverse, center, middle
+
+# Első kivétel
+
+---
+
+# Mikor találkozunk kivétellel?
+
+* Normál működés során nem várt esetek
+* Happy path - elvártnak megfelelő működés
+* Kivételt kapunk, ha olyan adattal, működéssel találkozunk, melyre nem számítottunk
+* Pl. számként nem értelmezhető szöveg, osztás nullával, tömb/lista esetén indexelési probléma
+* Azt jelzi, hogy valahogy kezelnünk kéne a helyzetet
+* Sokszor programozói hiba állhat a háttérben
+* Futásidőben történik
+
+---
+
+# Egyszerű kivételkezelés
+
+* A hiba figyelmen kívül hagyása
+* A program működése leáll
+
+```java
+public static void main(String[] args) {
+    String input = "xyz";
+    int number = Integer.parseInt(input);
+    System.out.println(number); // 1
+}
+```
+
+* 1-essel jelölt sor már nem fut le
+
+---
+
+# Stacktrace
+
+```plaintext
+Exception in thread "main" java.lang.NumberFormatException: For input string: "xyz"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at introexceptionfirstexception.InputNumberMain.main(InputNumberMain.java:7)
+```
+
+* Hívási lánc
+* Alulról felfelé olvasandó
+* `InputNumberMain` osztály 7. sorában van a hiba
+* Van egy üzenete is: `For input string: "xyz"`
+
+---
+
+# Valós példa
+
+```java
+public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    String input = scanner.nextLine();
+    int number = Integer.parseInt(input);
+    System.out.println(number);
+}
+```
+    </textarea>
+    <script src="resources/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+		ratio: '16:9',
+		});
+    </script>
+  </body>
+</html>

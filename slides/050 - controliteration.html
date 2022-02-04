@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ciklusok</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="resources/training360.css" rel="stylesheet">
+  </head>
+  <body>
+    <textarea id="source">
+class: inverse, center, middle
+
+
+
+# Ciklusok
+
+---
+
+# `while` utasítás
+
+* `boolean` feltétel
+* Addig hajtja végre a törzset, amíg a feltétel igaz
+* Minden végrehajtás előtt kiértékelődik a feltétel
+* Végtelen ciklus implementálható
+
+---
+
+# `while` példa
+
+```java
+int count = 1;
+while (count < 11) {
+    System.out.println("Count is: " + count);
+    count++;
+}
+```
+
+---
+
+# `do-while` utasítás
+
+* Annyiban különbözik a `while` utasítástól, hogy egyszer mindenképp lefut
+
+---
+
+# `do-while` példa
+
+```java
+int count = 1;
+do {
+    System.out.println("Count is: " + count);
+    count++;
+} while (count < 11);
+```
+
+---
+
+# `for` utasítás
+
+* Fej részei:
+  * Inicializációs utasítás
+  * Feltétel
+  * Léptető utasítás
+* Inicializációs utasításban deklarált változó csak a ciklus törzsében látható
+* Gyakran használt 0 és n-1 közötti értékek <br /> bejárására
+* Végtelen ciklus: `for ( ; ; ) {}`
+* Inicializációs utasításban <br /> több azonos típusú változó is deklarálható
+
+---
+
+# `for` példa
+
+```java
+for (int i = 0; i < 10; i++) {
+    System.out.println(i);
+}
+```
+
+---
+
+# for-each utasítás
+
+* Tömb elemeinek bejárására
+* Kollekció elemeinek bejárására, pl. `List`
+
+---
+
+# for-each példa
+
+```java
+String[] numbers = {"one", "two", "three"};
+// List<String> numbers = new ArrayList<>();
+for (String number: numbers) {
+    System.out.println(number);
+}
+```
+
+    </textarea>
+    <script src="resources/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+		ratio: '16:9',
+		});
+    </script>
+  </body>
+</html>

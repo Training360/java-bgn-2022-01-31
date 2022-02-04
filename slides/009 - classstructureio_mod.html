@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kiírás és beolvasás konzolról</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="resources/training360.css" rel="stylesheet">
+  </head>
+  <body>
+    <textarea id="source">
+class: inverse, center, middle
+
+# Kiírás és beolvasás konzolról
+
+---
+
+# Első programunk
+
+* Osztály: tervrajz
+* Metódus: utasítások összessége, névvel ellátva
+    * `main`: belépési pont 
+* Kiírás: `System.out.println` metódus hívásával
+
+```java
+package hello;
+
+public class HelloWorld {
+
+  public static void main(String[] args) {
+    System.out.println("Hello World!");
+  }
+
+}
+```
+
+---
+
+# Változó használata
+
+* Típus, név, érték
+* `String` osztály, mint típus
+
+```java
+public static void main(String[] args) {
+   String message = "Hello World!";
+   System.out.println(message);
+}
+```
+
+---
+
+# Érték bekérése `Scanner`-rel
+    
+* `Scanner` típusú változó, mely egy osztály, melyet importálni kell
+* Példányosítás `new` kulcsszóval
+* `nextLine()` metódussal sor beolvasása
+* String konkatenálás `+` operátorral
+
+---
+
+# Érték bekérése
+
+```java
+package hello;
+
+import java.util.Scanner;
+
+public class HelloWorld {
+
+    public static void main(String[] args) {
+        System.out.println("What is your name?");
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+        System.out.println("Hello " + name);
+    }
+}
+```
+
+---
+
+# Egész típusú változó
+
+* `int` primitív típus
+* `Scanner` osztály `nextInt()` metódusával kérhetjük le
+* Összeadás `+`, kivonás `-` operátorral
+* Stringhez `int` típusú érték is konkatenálható
+
+```java
+public static void main(String[] args) {
+    System.out.println("Year of birth?");
+    int yearOfBirth = scanner.nextInt();
+    int age = 2019 - yearOfBirth;
+    System.out.println("Age: " + age);
+}
+```
+
+    </textarea>
+    <script src="resources/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+		ratio: '16:9',
+		});
+    </script>
+  </body>
+</html>

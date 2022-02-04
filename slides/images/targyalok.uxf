@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>670</y>
+      <w>350</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>MeetingRoom
+--
+name: String
+length: int
+width: int
+--
+három paraméteres konstruktor
+getArea(): int
+getterek és setterek
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>390</y>
+      <w>350</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Office
+--
+meetingRooms: List&lt;MeetingRoom&gt;
+--
+addMeetingRoom(meetingRoom: MeetingRoom)
+printNames()
+printNamesReverse()
+printEvenNames()
+printAreas()
+printMeetingRoomsWithName(name: String)
+printMeetingRoomsContains(part: String)
+printAreasLargerThan(area: int)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>160</y>
+      <w>350</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>MeetingRoomController
+--
+office: Office
+--
+readOffice()
+printMenu()
+runMenu()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>270</y>
+      <w>30</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>570</y>
+      <w>30</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+</diagram>

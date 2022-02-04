@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bevezetés a metódusok használatába</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="resources/training360.css" rel="stylesheet">
+  </head>
+  <body>
+    <textarea id="source">
+class: inverse, center, middle
+
+
+
+# Bevezetés a metódusok használatába
+
+---
+
+# Metódusok
+
+* Két típust szeretünk megkülönböztetni, és ez alapján elnevezni
+  * Lekérdező (pl. getter metódusok is ide tartoznak)
+  * Állapotot módosító (pl. setter metódusok is ide tartoznak)
+* Imperatív programozás eszközei
+* Utasításokat tartalmaz
+* Attribútumokhoz fér hozzá
+* Lokális változókat definiálhat és fér hozzá
+
+---
+
+# Metódus felépítése
+
+* Szignatúra és törzs
+* Paraméterlista
+
+---
+
+# Metódushívás
+
+* Hívhat más metódusokat
+  * Saját példányon belül
+  * Attribútumok (objektumok) metódusait
+  * Lokális változók (objektumok) metódusait
+
+---
+
+# Metódus paraméterek
+
+* Formális paraméterek elfedhetik az attribútumokat,
+hivatkozás a `this` kulcsszóval
+* Lokális változók elfedhetik az attribútumokat,
+lehetőleg kerüljük
+* Formális paraméterek láthatósága a metódus törzsében
+* Lokális változók láthatósága blokkszintű, deklarációtól kezdve
+
+---
+
+# Speciális metódusok
+
+* `toString()` metódus
+
+    </textarea>
+    <script src="resources/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+		ratio: '16:9',
+		});
+    </script>
+  </body>
+</html>

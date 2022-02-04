@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fájl beolvasása</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="resources/training360.css" rel="stylesheet">
+  </head>
+  <body>
+    <textarea id="source">
+class: inverse, center, middle
+
+# Fájl beolvasása
+
+---
+
+# Fájl beolvasása
+
+```java
+public static void main(String[] args) {
+    try {
+        List<String> names = Files.readAllLines(Paths.get("names.txt"));
+        System.out.println(names);
+    }
+    catch (IOException ioe) {
+        ioe.printStackTrace();
+    }
+}
+```
+
+* A `Paths.get("names.txt")` vissszaad egy `Path` típusú referenciát a fájlra
+* A fájlt a projekt **főkönyvtárában** keresi
+
+---
+
+# Hiányzó fájl esetén
+
+```plaintext
+java.nio.file.NoSuchFileException: names_.txt
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:235)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:375)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:426)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:160)
+	at java.base/java.nio.file.Files.newBufferedReader(Files.java:2916)
+	at java.base/java.nio.file.Files.readAllLines(Files.java:3396)
+	at java.base/java.nio.file.Files.readAllLines(Files.java:3436)
+	at introexceptionreadfile.ReadNames.main(ReadNames.java:12)
+```
+    </textarea>
+    <script src="resources/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+		ratio: '16:9',
+		});
+    </script>
+  </body>
+</html>

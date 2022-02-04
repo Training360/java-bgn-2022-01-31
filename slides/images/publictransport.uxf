@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>290</x>
+      <y>40</y>
+      <w>310</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>PublicVehicle
+--
+- lineNumber: int
+- length: double
+--
++ PublicVehicle(lineNumber: int, length: double)
++ getLineNumber(): int
++ getLength(): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>220</y>
+      <w>350</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Bus
+--
+- brand: String
+--
++ Bus(lineNumber: int, length: double, brand: String )
++ getBrand(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>360</y>
+      <w>410</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Tram
+--
+- numberOfTramcars: int
+--
++ Tram(lineNumber: int, length: double, numberOfTramcars: int)
++ getNumberOfTramcars(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>500</x>
+      <y>220</y>
+      <w>400</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Metro
+--
+- numberOfStations: int
+--
++ Metro(lineNumber: int, length: double, numberOfStations: int)
++ getNumberOfStations(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>40</y>
+      <w>270</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>PublicTransport
+--
+- publicVehicles: List&lt;PublicVehicle&gt;
+--
++ getPublicVehicles(): List&lt;PublicVehicle&gt;
++ addVehicle(vehicle: PublicVehicle)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>150</y>
+      <w>100</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>150</y>
+      <w>100</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>150</y>
+      <w>30</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>590</x>
+      <y>80</y>
+      <w>180</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=0..n
+m1=1</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

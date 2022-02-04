@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tesztesetek életciklusa</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="resources/training360.css" rel="stylesheet">
+  </head>
+  <body>
+    <textarea id="source">
+class: inverse, center, middle
+
+# Tesztesetek életciklusa
+
+---
+
+# Test fixture
+
+* Minden, ami szükséges a teszteset sikeres lefutásához <br /> (inicializálás - ismert állapotba hozás, előfeltételek)
+* Kiemelhető külön metódusba
+* `@BeforeEach`, `@AfterEach` annotációkkal ellátott metódusok
+
+---
+
+## Test fixture példa
+
+```java
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
+
+class EmployeeTest {
+
+    Employee employee;
+
+    @BeforeEach
+    void initEmployee() {
+    	employee = new Employee("John Doe", 1970);
+    }
+
+    @Test
+    void testGetAge() {
+        assertEquals(49, employee.getAge(2019));
+    }
+
+    @Test
+    void testWithZeroAge() {
+    	assertEquals(0, employee.getAge(1970));
+    }
+}
+```
+
+
+    </textarea>
+    <script src="resources/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+		ratio: '16:9',
+		});
+    </script>
+  </body>
+</html>

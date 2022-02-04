@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Típuskonverzió</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="resources/training360.css" rel="stylesheet">
+  </head>
+  <body>
+    <textarea id="source">
+class: inverse, center, middle
+
+
+
+# Típuskonverzió
+
+---
+
+# Típuskonverzió
+
+* Erősen típusos nyelv
+* Kifejezésben összeegyeztethető típusok vannak-e
+* Főleg fordítási időben ellenőrizhető
+* Futási időben kivétel
+
+---
+
+# Automatikus konverzió
+
+* Bővebb ábrázolt tartomány felé kell konvertálni
+* `float` változónak adható `long` érték, `double` változónak adható `long` érték, adatvesztéssel járhat
+* `byte`, `short`, `char` típusnak értékül adható megfelelő `int` literál
+
+---
+
+# Explicit konverzió
+
+* Szűkebb ábrázolási tartomány felé kell konvertálni
+* Információvesztés történhet
+* Egész számok esetén a felső bitek elvesznek
+* Lebegőpontos számok egészre konvertálásakor nem kerekítés történik
+
+    </textarea>
+    <script src="resources/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+		ratio: '16:9',
+		});
+    </script>
+  </body>
+</html>

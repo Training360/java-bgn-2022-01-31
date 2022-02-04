@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>10</y>
+      <w>270</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Person
+--
+- name: String
+- address: String
+--
++ Person(name: String, address: String)
++ getName(): String
++ getAddress(): String
++ migrate(newAddress: String)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>220</y>
+      <w>390</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Employee
+--
+- salary: double
+--
++ Employee(name: String, address: String, salary: double)
++ getSalary(): double
++ raiseSalary(percent: int)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>400</y>
+      <w>510</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Boss
+--
+- static final LEADERSHIP_FACTOR: double
+- numberOfEmployees: int
+--
++ Boss(name: String, address: String, salary: double, numberOfEmployees: int)
++ getSalary(): double
++ getNumberOfEmployees(): int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>600</y>
+      <w>630</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>BigBoss
+--
+- bonus: double
+--
++ BigBoss(name: String, address: String, salary: double, numberOfEmployees: int, bonus: double)
++ getSalary(): double
++ getNumberOfEmployees(): int
++ getBonus(): double
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>140</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>320</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>520</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+</diagram>

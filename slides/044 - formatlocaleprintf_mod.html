@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>printf</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="resources/training360.css" rel="stylesheet">
+  </head>
+  <body>
+    <textarea id="source">
+class: inverse, center, middle
+
+
+
+# A printf() és a format() metódus
+
+---
+
+# A `printf()` és a `format()` metódus
+
+* C++ kedvelt megoldása paraméterezett szövegek kiírására, Javaban megvalósítva
+* A `System.out.printf("The result is: %d", 500);` eredménye: `The result is: 500`
+* `String result = String.format("The result is %d", 500);`
+    * A `result` változó értéke ebben az esetben is: `The result is 500`.
+* Paraméterben megadhatók a következők: <br/> a formátum string, <br/> paraméterek (annyi, ahány konverziós karakter van)
+
+---
+
+# Konverziós karakterek
+
+* `%s` - szöveg
+* `%d` - egész szám
+* `%f` - lebegőpontos szám, megadható a tizedesjegyek száma
+* Példa:
+    * `System.out.printf("A %s osztály megtett %d kilométert, ez a teljes út %.1f része.", "10.A", 12, 0.513);`
+    * Eredménye: `A 10.A osztály megtett 12 kilométert, ez a teljes út 0,5 része.`
+
+    </textarea>
+    <script src="resources/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+		ratio: '16:9',
+		});
+    </script>
+  </body>
+</html>

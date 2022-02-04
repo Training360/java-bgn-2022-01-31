@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objektumok és attribútumok</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="resources/training360.css" rel="stylesheet">
+  </head>
+  <body>
+    <textarea id="source">
+class: inverse, center, middle
+
+# A Java osztály
+
+---
+
+# Osztály
+
+* Java alkalmazás alapvető építőkövei az osztályok
+* Tipikusan egy fájlban egy osztály
+* Csomagokba, könyvtárakba rendezve
+    * Struktúrát ad az alkalmazásunknak
+    * Láthatóságot szabályoz
+* Osztály: tervrajz
+
+---
+
+# Osztály felépítése
+
+* Attribútumok: állapot - adatok, értékek tárolására
+ 
+---
+
+# Attribútumok
+
+* Felépítése:
+    * Típus
+    * Név - főnév legyen
+
+```java
+package trainerapp;
+
+public class Trainer {
+
+    String name;
+
+}
+```
+
+---
+
+# Több attribútum
+
+```java
+package trainerapp;
+
+public class Trainer {
+
+    String name;
+
+    int yearOfBirth;
+
+}
+```
+
+---
+
+# Attribútumok láthatósági módosítója
+
+* Information hiding - `private` módosítóval rendelkező attribútumokhoz nem lehet kívülről hozzáférni
+
+```java
+public class Trainer {
+
+    private String name;
+
+    private int yearOfBirth;
+
+}
+```
+---
+
+# Osztály felépítése
+
+* Attribútumok: állapot - adatok, értékek tárolására 
+* Metódusok
+    * Utasítások sorozata, mely névvel rendelkezik
+    * Állapot lekérdezésére és módosítására
+
+---
+
+# Lekérdező metódus
+
+```java
+package trainerapp;
+
+public class Trainer {
+
+    String name;
+
+    int yearOfBirth;
+
+    public String getName() {
+        return name;
+    }
+
+    public int getYearOfBirth() {
+        return yearOfBirth;
+    }
+}
+```
+
+---
+
+# További lekérdező metódusok
+
+```java
+package trainerapp;
+
+public class Trainer {
+
+    String name;
+
+    int yearOfBirth;
+
+    public String getNameAndYearOfBirth() {
+        return name + ": " + yearOfBirth;
+    }
+
+    public int getAge(int year) {
+        return year - yearOfBirth;
+    }
+}
+```
+
+---
+
+# Módosító metódus
+
+```java
+public void changeName(String newName) {
+    name = "Mr." + newName;
+}
+```
+
+---
+
+# Módosító metódus
+
+* Paraméter neve elfedi az attribútum nevét
+* A `this` kulcsszóval mondjuk meg, hogy az attribútum értékét akarjuk módosítani
+
+```java
+public void setName(String name) {
+    this.name = name;
+}
+```
+
+---
+
+# Getter és setter metódusok
+
+```java
+public String getName() {
+    return name;
+}
+
+public void setName(String name) {
+    this.name = name;
+}
+
+public int getYearOfBirth() {
+    return yearOfBirth;
+}
+
+public void setYearOfBirth(int yearOfBirth) {
+    this.yearOfBirth = yearOfBirth;
+}
+```
+
+---
+
+# Osztály felépítése
+
+* Attribútumok: állapot - adatok, értékek tárolására
+* Metódusok
+    * Utasítások sorozata, mely névvel rendelkezik
+    * Állapot lekérdezésére és módosítására
+* Konstruktor
+    * Állapot inicializálására
+    * Példányosításkor fut le
+---
+
+# Objektum, példány
+
+* Osztály (a tervrajz) alapján készül az objektum
+* Objektumorientált nyelv alapja, a program objektumok együttműködése
+---
+
+# Példa konstruktor
+
+```java
+package trainerapp;
+
+public class Trainer {
+
+    private String name;
+
+    private int yearOfBirth;
+
+    public Trainer() {
+        this.name = "John Doe";
+        this.yearOfBirth = 1980;
+    }
+
+    // getter és setter metódusok
+
+}
+```
+
+```java
+Trainer trainer = new Trainer();
+```
+
+---
+
+# Paraméteres konstruktor
+
+```java
+package trainerapp;
+
+public class Trainer {
+
+    private String name;
+
+    private int yearOfBirth;
+
+    public Trainer(String name, int yearOfBirth) {
+        this.name = name;
+        this.yearOfBirth = yearOfBirth;
+    }
+
+    // getter és setter metódusok
+
+}
+```
+
+```java
+Trainer trainer = new Trainer("John Doe", 1980);
+Trainer anotherTrainer = new Trainer("Jack Doe", 1970);
+```
+
+---
+
+# Tesztelés `main` metódusból
+
+* `main` metódust tesztelés céljából elhelyezhetjük az adott osztályban is
+
+
+
+    </textarea>
+    <script src="resources/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+		ratio: '16:9',
+		});
+    </script>
+  </body>
+</html>

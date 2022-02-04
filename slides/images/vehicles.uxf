@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text/>
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>50</y>
+      <w>320</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Vehicle
+--
+- vehicleWeight: int
++ static final PERSON_AVERAGE_WEIGHT: int
+--
++ Vehicle(vehicleWeight: int)
++ getGrossLoad(): int
++ getVehicleWeight(): int
++ toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>290</y>
+      <w>330</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Car
+--
+# numberOfPassenger: int
+--
++ Car(vehicleWeight: int, numberOfPassenger: int)
++ getGrossLoad(): int
++ toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>290</y>
+      <w>290</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>FerryBoat
+--
+- car: Car
++ static final MAX_CARRY_WEIGHT: int
+--
++ FerryBoat(vehicleWeight: int)
++  canCarry(car: Car): boolean
++ load(car: Car): boolean
++ getGrossLoad(): int
++ toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>530</y>
+      <w>450</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Van
+--
+- cargoWeight: int
+--
++ Van(vehicleWeight: int, numberOfPassenger: int, cargoWeight: int)
++ getGrossLoad(): int
++ toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>190</y>
+      <w>30</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>430</y>
+      <w>30</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>110</y>
+      <w>280</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;260.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>360</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
